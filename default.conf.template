@@ -6,8 +6,8 @@ server {
     index  index.html index.htm;
   }
 
-  location /complexica/api {
-    proxy_pass https://complexica.herokuapp.com/api; #External URL where request needed to redirected.
+  location /complexica {
+    proxy_pass https://complexica.herokuapp.com; #External URL where request needed to redirected.
     proxy_http_version 1.1;
     proxy_set_header Upgrade $http_upgrade;
     proxy_set_header Host $proxy_host; # proxy host is external url.
